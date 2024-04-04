@@ -28,7 +28,7 @@ if (routes.length == 2) {
                 let template = Handlebars.compile(xhr.responseText);
                 document.body.innerHTML = xhr.responseText;
                 let tmp = document.querySelector("#template").innerHTML;
-                if ("https://" in tmp)
+                if (tmp.includes("https://"))
                     xhr.open("GET", tmp);
                 else xhr.open("GET", `__templates/${tmp}`);
                 xhr.onload = function() {
@@ -43,7 +43,7 @@ if (routes.length == 2) {
                 let template = Handlebars.compile(xhr.responseText);
                 document.body.innerHTML = xhr.responseText;
                 let tmp = document.querySelector("#template").innerHTML;
-                if ("https://" in tmp)
+                if (tmp.includes("https://"))
                     xhr.open("GET", tmp);
                 else xhr.open("GET", `__templates/${tmp}`);
                 xhr.onload = function() {
