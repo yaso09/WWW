@@ -4,3 +4,29 @@ body {
     color: #fff;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+img {
+    height: 300px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+} img:hover {
+    filter: brightness(1.5);
+    transform: scale(1.1);
+}
+
+svg {
+    height: 25px;
+    padding: 10px;
+}
+
+.count {
+    border: 1px #fff solid;
+    padding: 20px;
+    text-align: center;
+}
+
+.bold {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
