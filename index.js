@@ -28,7 +28,9 @@ if (routes.length == 2) {
                 let template = Handlebars.compile(xhr.responseText);
                 document.body.innerHTML = xhr.responseText;
                 let tmp = document.querySelector("#template").innerHTML;
-                xhr.open("GET", `__templates/${tmp}`);
+                if ("https://" in tmp)
+                    xhr.open("GET", tmp);
+                else xhr.open("GET", `__templates/${tmp}`);
                 xhr.onload = function() {
                     if (xhr.status == 200)
                         document.body.innerHTML =
@@ -41,7 +43,9 @@ if (routes.length == 2) {
                 let template = Handlebars.compile(xhr.responseText);
                 document.body.innerHTML = xhr.responseText;
                 let tmp = document.querySelector("#template").innerHTML;
-                xhr.open("GET", `__templates/${tmp}`);
+                if ("https://" in tmp)
+                    xhr.open("GET", tmp);
+                else xhr.open("GET", `__templates/${tmp}`);
                 xhr.onload = function() {
                     if (xhr.status == 200) {
                         tmp = JSON.parse(xhr.responseText);
