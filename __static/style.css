@@ -25,7 +25,7 @@ svg {
     padding: 15px;
     text-align: center;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.2s;
 } .count:hover {
     border-radius: 8px;
     background: rgb(99, 0, 149);
