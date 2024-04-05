@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to top right, rgb(0, 0, 0) 50%, rgb(99, 0, 149) 100%);
+    background: linear-gradient(to top, rgb(0, 0, 0) 75%, rgb(99, 0, 149) 100%);
     background-size: cover;
     background-position: center center;
     color: #fff;
@@ -32,9 +32,12 @@ svg {
 }
 
 .menu {
+    transform: translateY(-10px);
     justify-content: right;
     position: sticky;
-    right: 0px; left: 0px;
+    right: 0px; left: 0px; top: 5px;
+    z-index: 1; background: #000;
+    border-radius: 15px #000 solid;
 } a {
     text-decoration: none;
     color: #fff;

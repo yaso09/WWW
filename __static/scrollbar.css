@@ -1,0 +1,41 @@
+/* Gemini adam adam */
+
+/* Scrollbar genişliği */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Scrollbar rayı rengi */
+  ::-webkit-scrollbar-track {
+    background-color: #161616;
+  }
+  
+  /* Scrollbar thumb rengi */
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(99, 0, 149);
+  }
+  
+  /* Scrollbar thumb hover rengi */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #8700b7;
+  }
+  
+  /* Scrollbar thumb aktif rengi */
+  ::-webkit-scrollbar-thumb:active {
+    background-color: #6e0099;
+  }
+  
+  /* Scrollbar ok tuşları rengi */
+  ::-webkit-scrollbar-button {
+    background-color: #000;
+  }
+  
+  /* Scrollbar ok tuşları hover rengi */
+  ::-webkit-scrollbar-button:hover {
+    background-color: #000;
+  }
+  
+  /* Scrollbar ok tuşları aktif rengi */
+  ::-webkit-scrollbar-button:active {
+    background-color: #000;
+  }

@@ -26,4 +26,31 @@ div.markdown-body {
     text-align: center;
     font-size: 3rem;
     font-weight: bolder;
+    cursor: pointer;
+    transition: 0.2s;
+} #header1:hover {
+    letter-spacing: 5px;
 }
+button {
+    width: 70%;
+    position: relative;
+    font-size: 20px;
+    background: #393939;
+    padding: 15px;
+    cursor: pointer;
+    border: 0;
+    /*border: #fff 1px solid;*/
+    border-radius: 15px;
+    transition: 0.5s;
+} button span {
+    color: #fff;
+    position: absolute;
+    left: 285px;
+} button svg {
+    height: 25px; left: 235px;
+    position: absolute; top: 13px;
+} button:hover {
+    background: #555555;
+}
+
+

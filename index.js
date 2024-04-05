@@ -63,8 +63,15 @@ if (routes.length == 2) {
     // `/a/b` şeklinde giden adresler ve `/a/<b>` şeklinde giden adresler için
 }
 
+let isload = false;
+
 function onload() {
-    const script = document.querySelector("#script");
-    eval(script.innerHTML);
+    if (!isload) {
+        const script = document.querySelector("#script");
+        eval(script.innerHTML);
+    }
+    isload = true;
 }
+
+setInterval(onload);
 
