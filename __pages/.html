@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasir Eymen KAYABAŞI</title>
     <link rel="stylesheet" href="__static/style.css">
+    <script
+        type="module"
+        src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+    ></script>
 </head>
 <body><br><br><br>
     <center>
@@ -12,9 +16,9 @@
         <h1>
             {{ name }}
         </h1>
-        <small>
+        <h5>
             Full-stack web developer, Researcher and High School Student
-        </small><br><br>
+        </h5>
         <table>
             <tr>
                 <td class="count">
@@ -49,7 +53,61 @@
                 </td>
             </tr>
         </table>
+    </center><br>
+    <center>
+        <table >
+            <table class="menu">
+            <tr>
+                <td class="bold">
+                    <a href="/projects">Projects</a>
+                </td>
+                <td class="bold">
+                    <a href="/posts">Posts</a>
+                </td>
+            </tr>
+        </table><br><hr>
     </center>
+    <center>
+        <div id="aboutme">
+            <zero-md style="display: none;"
+            src="https://raw.githubusercontent.com/yaso09/yaso09/main/README.md">
+                <template data-merge="prepend">
+                    <link rel="stylesheet" href="__static/style-markdown.css">
+                </template>
+            </zero-md>
+            <zero-md style="display: block;" src="__static/ABOUTME.md">
+                <template data-merge="prepend">
+                    <link rel="stylesheet" href="__static/style-markdown.css">
+                </template>
+            </zero-md>
+        </div>
+    </center>
+    <center>
+        <a href="">Source Code</a>
+    </center>
+    <div id="end"></div>
 </body>
 </html>
-<script type="text" id="template">https://api.github.com/users/yaso09</script>
+<script type="template">https://api.github.com/users/yaso09</script>
+<script id="script">
+    /*
+    * JavaScript kodları sadece script#script içinde çalışıyor
+    *
+    const div = document.createElement("div");
+    div.id = "aboutme";
+    const md = document.createElement("zero-md");
+    const ctn = document.createElement("script");
+    ctn.type = "text/markdown";
+    ctn.setAttribute("data-dedent", "");
+    fetch("./__static/ABOUTME.md")
+        .then(dat => dat.text())
+        .then(text => {
+            ctn.innerHTML = text;
+            md.appendChild(ctn);
+        })
+    div.appendChild(md);
+    document.body.insertBefore(
+        div, document.getElementById("end")
+    )
+    */
+</script>

@@ -27,7 +27,7 @@ if (routes.length == 2) {
             xhr.onload = function() {
                 let template = Handlebars.compile(xhr.responseText);
                 document.body.innerHTML = xhr.responseText;
-                let tmp = document.querySelector("#template").innerHTML;
+                let tmp = document.querySelector("script[type='template']").innerHTML;
                 if (tmp.includes("https://"))
                     xhr.open("GET", tmp);
                 else xhr.open("GET", `__templates/${tmp}`);
@@ -35,8 +35,11 @@ if (routes.length == 2) {
                     if (xhr.status == 200)
                         document.body.innerHTML =
                             template(JSON.parse(xhr.responseText));
+                        onload();
                 }; xhr.send();
+                onload();
             }; xhr.send();
+            onload();
         } else {
             xhr.open("GET", "__pages/<>.html");
             xhr.onload = function() {
@@ -52,9 +55,16 @@ if (routes.length == 2) {
                         tmp["route"] = routes[routes.length - 1];
                         document.body.innerHTML = template(tmp);
                 }}
+                onload();
             }
+        onload();
     }}
 } else {
     // `/a/b` şeklinde giden adresler ve `/a/<b>` şeklinde giden adresler için
+}
+
+function onload() {
+    const script = document.querySelector("#script");
+    eval(script.innerHTML);
 }
 

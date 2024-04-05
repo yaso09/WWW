@@ -1,0 +1,29 @@
+div.markdown-body {
+    color: #fff;
+    background: transparent;
+    position: relative;
+    width: 75%;
+    left: 12%; right: 12%;
+}
+::after {
+    display: none;
+}
+#adage-icon {
+    height: 50px;
+    padding: 1%;
+    color: #f2f2f2e5;
+}
+#adage {
+    width: 80%;
+    position: relative;
+    left: 10%; right: 10%;
+    font-weight: bold;
+}
+#owneradage {
+    font-size: 3cap;
+}
+#header1 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+}

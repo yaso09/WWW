@@ -1,6 +1,7 @@
 body {
-    background: rgb(1,77,19);
-    background: radial-gradient(circle, rgba(1,77,19,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to top right, rgb(0, 0, 0) 50%, rgb(99, 0, 149) 100%);
+    background-size: cover;
+    background-position: center center;
     color: #fff;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -21,12 +22,45 @@ svg {
 }
 
 .count {
-    border: 1px #fff solid;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+} .count:hover {
+    border-radius: 8px;
+    background: rgb(99, 0, 149);
+}
+
+.menu {
+    justify-content: right;
+    position: sticky;
+    right: 0px; left: 0px;
+} a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+} a:hover {
+    text-decoration:overline #fff 3px;
+}
+
+hr {
+  width: 75%;
+  margin: 0 auto;
+  border: none;
+  height: 0.1rem;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 25%, rgb(255, 255, 255) 75%, rgba(251, 251, 251, 0) 100%);
+}
+
+#aboutme {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    text-align: left;
 }
 
 .bold {
     font-size: 1.6rem;
     font-weight: bold;
+    color: #fff;
 }
