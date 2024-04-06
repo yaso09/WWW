@@ -10,7 +10,19 @@
             "title": "İmtahan-ı Hain",
             "image": "https://i0.wp.com/wolkanca.com/wp-content/uploads/2024/03/terorden-arananlar-listesi-oyun.webp",
             "description": "A terorist-quiz fork",
-            "executable": "https://imtahanihain.vercel.app/"
+            "executable": "https://imtahanihain.vercel.app"
+        },
+        {
+            "title": "placeTR",
+            "image": "https://github.com/placeTR/.github/assets/93868975/2759814c-9565-49af-b020-2b9b88459938",
+            "description": "Organization of r/place Türkiye Branch",
+            "executable": "https://placetr.github.io"
+        },
+        {
+            "title": "Array",
+            "image": "https://github.com/srcatarr/.github/raw/main/arr_banner.png",
+            "description": "Innovative solutions",
+            "executable": "https://github.com/srcatarr"
         }
     ]
 }

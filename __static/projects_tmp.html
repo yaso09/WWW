@@ -2,12 +2,10 @@
 <button onclick="
 window.open('{{ executable }}', '_blank', 'executable')
 "
-style="background-image: url('{{ image }}');"
 class="project">
+    <img src="{{ image }}" alt="">
     <div>
-        <center>
-            <h1>{{ project.title }}</h1>
-        </center><hr>
+        <h2>{{ project.title }}</h2>
         <p>{{ project.description }}</p>
     </div>
 </button>

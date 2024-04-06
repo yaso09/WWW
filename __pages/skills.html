@@ -62,13 +62,13 @@
                 <td class="bold">
                     <a href="/about-me">About Me</a>
                 </td>
-                <td class="bold">
+                <td id="selected" class="bold">
                     <a href="/skills">Skills</a>
                 </td>
                 <td class="bold">
                     <a href="/projects">Projects</a>
                 </td>
-                <td id="selected" class="bold">
+                <td class="bold">
                     <a href="/posts">Posts</a>
                 </td>
             </tr>
@@ -76,11 +76,26 @@
     </center>
     <center class="div">
         <div id="aboutme">
-            <center>
-                <h1>
-                    Sorry
-                </h1>
-                <p>I don't finish this page, please try again later.</p>
+            <center style="position: relative; width: 70%; left:15%">
+                <h1>Development</h1>
+                <img class="skill" src="__static/cordova.svg">
+                <img class="skill" src="__static/arduino.svg">
+                <img class="skill" src="__static/bash.svg">
+                <img class="skill" src="__static/bootstrap.svg">
+                <img class="skill" src="__static/csharp.svg">
+                <img class="skill" src="__static/c.svg">
+                <img class="skill" src="__static/css.svg">
+                <img class="skill" src="__static/electron.svg">
+                <img class="skill" src="__static/express.svg">
+                <img class="skill" src="__static/figma.svg">
+                <img class="skill" src="__static/flask.svg">
+                <img class="skill" src="__static/git.svg">
+                <img class="skill" src="__static/html.svg">
+                <img class="skill" src="__static/javascript.svg">
+                <img class="skill" src="__static/jekyll.svg">
+                <img class="skill" src="__static/node.svg">
+                <img class="skill" src="__static/python.svg">
+                <img class="skill" src="__static/typescript.svg">
             </center>
         </div>
         <div style="overflow:hidden;max-width:100%;width:50%;height:200px;padding-bottom:3%;border-radius:50px;"><div id="my-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Nilüfer/Bursa,+Türkiye&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><style>#my-map-display .text-marker{}.map-generator{ max-width: 100%; max-height: 100%; background: none;}</style></div>
@@ -124,29 +139,24 @@
 </html>
 <script type="template">https://api.github.com/users/yaso09</script>
 <script id="script">
-    fetch("__static/posts_tmp.html")
+    /*
+    * JavaScript kodları sadece script#script içinde çalışıyor
+    *
+    const div = document.createElement("div");
+    div.id = "aboutme";
+    const md = document.createElement("zero-md");
+    const ctn = document.createElement("script");
+    ctn.type = "text/markdown";
+    ctn.setAttribute("data-dedent", "");
+    fetch("./__static/ABOUTME.md")
         .then(dat => dat.text())
         .then(text => {
-            const out = Handlebars.compile(text);
-            fetch("./__templates/posts.json")
-                .then(dat => dat.json())
-                .then(json => {
-                    document.querySelector("#list").innerHTML = out(json);
-                })
+            ctn.innerHTML = text;
+            md.appendChild(ctn);
         })
-    const intervalid = setInterval(function() {
-        if (document.querySelector("#list").innerHTML) clearInterval(intervalid);
-        else {
-            fetch("__static/posts_tmp.html")
-                .then(dat => dat.text())
-                .then(text => {
-                    const out = Handlebars.compile(text);
-                    fetch("./__templates/posts.json")
-                        .then(dat => dat.json())
-                        .then(json => {
-                            document.querySelector("#list").innerHTML = out(json);
-                        })
-                })
-        }
-    }, 500)
+    div.appendChild(md);
+    document.body.insertBefore(
+        div, document.getElementById("end")
+    )
+    */
 </script>
