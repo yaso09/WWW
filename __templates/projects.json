@@ -1,19 +1,10 @@
 {
     "projects": [
         {
-            "title": "Game of Thrones",
+            "title": "Massive Multiplayer Platformer Fork",
             "image": "https://www.wallpaperflare.com/static/663/960/1016/game-of-thrones-game-thrones-poster-wallpaper.jpg",
-            "description": "Movie"
-        },
-        {
-            "title": "God of War",
-            "image": "https://i.pinimg.com/736x/84/a1/1a/84a11adbfcfecda5ce0b27c8ca58ee2b.jpg",
-            "description": "Game"
-        },
-        {
-            "title": "Forza Horizon 4",
-            "image": "https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2018/06/Forza-Horizon-4_Small-Horizontal-Art-.jpg?q=50&fit=contain&w=1140&h=570&dpr=1.5",
-            "description": "Game"
+            "description": "A game made with Scratch",
+            "executable": "__static/executables/massive_multiplayer_platformer_fork.html"
         }
     ]
 }

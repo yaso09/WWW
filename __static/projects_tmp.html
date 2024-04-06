@@ -1,5 +1,9 @@
 {{#each projects as |project|}}
-<button style="background-image: url('{{ image }}');" class="project">
+<button onclick="
+const win = window.open('{{ executable }}', '_blank', 'executable')
+"
+style="background-image: url('{{ image }}');"
+class="project">
     <div>
         <center>
             <h1>{{ project.title }}</h1>
