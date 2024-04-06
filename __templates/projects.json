@@ -5,6 +5,12 @@
             "image": "https://images.crazygames.com/games/massive-multiplayer-platformer/cover-1643018893771.png?auto=format%2Ccompress&q=75&cs=strip&ch=DPR&w=564",
             "description": "A game made with Scratch",
             "executable": "__static/executables/massive_multiplayer_platformer_fork.html"
+        },
+        {
+            "title": "İmtahan-ı Hain",
+            "image": "https://i0.wp.com/wolkanca.com/wp-content/uploads/2024/03/terorden-arananlar-listesi-oyun.webp",
+            "description": "A terorist-quiz fork",
+            "executable": "https://imtahanihain.vercel.app/"
         }
     ]
 }

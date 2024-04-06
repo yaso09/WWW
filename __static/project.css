@@ -8,17 +8,19 @@
     transition: 0.2s;
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #000;
     margin: 3%;
 } .project:hover {
     transform: scale(1.05);
-}
+} .project hr { background: #000; }
 .project div {
     position: relative;
     left: 0; right: 0;
     height: 200px;
     width: 100%;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px) sepia(100%);
+} .project p {
+    font-weight: 700;
 }
 .project p, .project h1 {
     padding: 5%;
