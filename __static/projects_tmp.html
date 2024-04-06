@@ -1,0 +1,10 @@
+{{#each projects as |project|}}
+<button style="background-image: url('{{ image }}');" class="project">
+    <div>
+        <center>
+            <h1>{{ project.title }}</h1>
+        </center><hr>
+        <p>{{ project.description }}</p>
+    </div>
+</button>
+{{/each}}

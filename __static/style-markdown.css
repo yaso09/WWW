@@ -1,3 +1,16 @@
+@media (max-width: 659px) {
+    div.markdown-body {
+        width: 100%;
+        left: 0; right: 0;
+    }
+    div.markdown-body div#header1:hover {
+        letter-spacing: 0px;
+    }
+    div.markdown-body button:hover {
+        background: #393939;
+    }
+}
+
 div.markdown-body {
     color: #fff;
     background: transparent;
@@ -46,9 +59,9 @@ button {
 } button span {
     color: #fff;
     position: absolute;
-    left: 285px;
+    left: 20%;
 } button svg {
-    height: 25px; left: 235px;
+    height: 25px; left: 5%;
     position: absolute; top: 13px;
 } button:hover {
     background: #555555;

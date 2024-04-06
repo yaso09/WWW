@@ -4,6 +4,7 @@ body {
     background-position: center center;
     color: #fff;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    transform: scale(1);
 }
 img {
     height: 300px;
@@ -19,6 +20,34 @@ img {
 svg {
     height: 25px;
     padding: 10px;
+}
+
+@media (max-width: 659px) {
+    body {
+        overflow-x: hidden;
+    }
+    img:hover {
+        filter: brightness(1);
+        transform: scale(1);
+    }
+    center.div {
+        position: relative;
+        left: 15px; right: 15;
+        width: 140%;
+        padding-top: 15px;
+        margin-left: -100px;
+        margin-right: -0; /* ananı s2m */
+    }
+    * {
+        font-size: 15px;
+    }
+    .count {
+        display: none;
+    }
+    hr, #aboutme {
+        width: 150%;
+        margin-right: -100rem;
+    }
 }
 
 .count {
@@ -66,4 +95,17 @@ hr {
     font-size: 1.6rem;
     font-weight: bold;
     color: #fff;
+}
+
+#gamezone-redirect {
+    background: linear-gradient(to right, #001e59 0%, #003c03 25%, #001e59 50%, #003c03 100%);
+    padding: 1%;
+    cursor: pointer;
+    color: #fff;
+    border: 0; border-radius: 8px;
+    position: relative; width: 90%;
+    font-size: 25px;
+    font-weight: bold;
+} #gamezone-redirect:hover {
+    text-decoration: none;
 }

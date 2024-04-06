@@ -1,0 +1,30 @@
+.project {
+    border: 0;
+    padding: -5%;
+    position: relative;
+    width: 35%;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    margin: 3%;
+} .project:hover {
+    transform: scale(1.05);
+}
+.project div {
+    position: relative;
+    left: 0; right: 0;
+    height: 200px;
+    width: 100%;
+    backdrop-filter: blur(3px);
+}
+.project p, .project h1 {
+    padding: 5%;
+}
+@media (max-width: 950px) {
+    .project {
+        width: 100%;
+    }
+}

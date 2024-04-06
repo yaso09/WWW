@@ -6,6 +6,7 @@
     <title>Yasir Eymen KAYABAŞI</title>
     <link rel="stylesheet" href="__static/style.css">
     <link rel="stylesheet" href="__static/scrollbar.css">
+    <link rel="stylesheet" href="__static/project.css">
     <script
         type="module"
         src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
@@ -71,8 +72,20 @@
             </tr>
         </table><br><hr>
     </center>
-    <center>
-        {{ deneme }}
+    <center class="div">
+        <div id="aboutme">
+            <center>
+                <button style="display: none;"
+                 onclick="window.location.href='gamezone'"
+                 id="gamezone-redirect">
+                Are you looking for games?
+                </button>
+            </center><br><br><br>
+            <center>
+                <div id="list"></div>
+            </center>
+        </div>
+        <div style="overflow:hidden;max-width:100%;width:50%;height:200px;padding-bottom:3%;border-radius:50px;"><div id="my-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Nilüfer/Bursa,+Türkiye&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><style>#my-map-display .text-marker{}.map-generator{ max-width: 100%; max-height: 100%; background: none;}</style></div>
     </center>
     <center>
         <a href="">Source Code</a>
@@ -82,24 +95,29 @@
 </html>
 <script type="template">https://api.github.com/users/yaso09</script>
 <script id="script">
-    /*
-    * JavaScript kodları sadece script#script içinde çalışıyor
-    *
-    const div = document.createElement("div");
-    div.id = "aboutme";
-    const md = document.createElement("zero-md");
-    const ctn = document.createElement("script");
-    ctn.type = "text/markdown";
-    ctn.setAttribute("data-dedent", "");
-    fetch("./__static/ABOUTME.md")
+    fetch("__static/projects_tmp.html")
         .then(dat => dat.text())
         .then(text => {
-            ctn.innerHTML = text;
-            md.appendChild(ctn);
+            const out = Handlebars.compile(text);
+            fetch("./__templates/projects.json")
+                .then(dat => dat.json())
+                .then(json => {
+                    document.querySelector("#list").innerHTML = out(json);
+                })
         })
-    div.appendChild(md);
-    document.body.insertBefore(
-        div, document.getElementById("end")
-    )
-    */
+    const intervalid = setInterval(function() {
+        if (document.querySelector("#list").innerHTML) clearInterval(intervalid);
+        else {
+            fetch("__static/projects_tmp.html")
+                .then(dat => dat.text())
+                .then(text => {
+                    const out = Handlebars.compile(text);
+                    fetch("./__templates/projects.json")
+                        .then(dat => dat.json())
+                        .then(json => {
+                            document.querySelector("#list").innerHTML = out(json);
+                        })
+                })
+        }
+    }, 500)
 </script>
