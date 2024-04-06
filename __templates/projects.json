@@ -2,7 +2,7 @@
     "projects": [
         {
             "title": "Massive Multiplayer Platformer Fork",
-            "image": "https://www.wallpaperflare.com/static/663/960/1016/game-of-thrones-game-thrones-poster-wallpaper.jpg",
+            "image": "https://images.crazygames.com/games/massive-multiplayer-platformer/cover-1643018893771.png?auto=format%2Ccompress&q=75&cs=strip&ch=DPR&w=564",
             "description": "A game made with Scratch",
             "executable": "__static/executables/massive_multiplayer_platformer_fork.html"
         }
