@@ -45,9 +45,12 @@ svg {
     .count {
         display: none;
     }
-    hr, #aboutme {
+    #aboutme {
         width: 150%;
         margin-right: -100rem;
+    }
+    hr {
+        width: 100%;
     }
 }
 

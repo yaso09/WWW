@@ -1,0 +1,9 @@
+{{#each posts as |post|}}
+<button onclick="
+window.location.href = './post#{{ post.id }}';
+"
+class="post">
+    <h1>{{ post.title }}</h1><hr>
+    <p>{{ post.description }}</p><br>
+</button>
+{{/each}}

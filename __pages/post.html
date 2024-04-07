@@ -6,7 +6,6 @@
     <title>Yasir Eymen KAYABAŞI</title>
     <link rel="stylesheet" href="__static/style.css">
     <link rel="stylesheet" href="__static/scrollbar.css">
-    <link rel="stylesheet" href="__static/project.css">
     <script
         type="module"
         src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
@@ -66,10 +65,10 @@
                 <td class="bold">
                     <a href="/skills">Skills</a>
                 </td>
-                <td id="selected" class="bold">
+                <td class="bold">
                     <a href="/projects">Projects</a>
                 </td>
-                <td class="bold">
+                <td id="selected" class="bold">
                     <a href="/posts">Posts</a>
                 </td>
             </tr>
@@ -78,17 +77,13 @@
     <center class="div">
         <div id="aboutme">
             <center>
-                <button style="display: none;"
-                 onclick="window.location.href='gamezone'"
-                 id="gamezone-redirect">
-                Are you looking for games?
-                </button>
-            </center><br><br><br>
-            <center>
-                <div id="list">
-                    <h1>Loading list...</h1>
-                </div>
+                <h1>Loading post...</h1>
             </center>
+            <!--zero-md style="display: block;" src="__static/ABOUTME.md">
+                <template data-merge="prepend">
+                    <link rel="stylesheet" href="__static/style-markdown.css">
+                </template>
+            </zero-md-->
         </div>
         <div style="overflow:hidden;max-width:100%;width:50%;height:200px;padding-bottom:3%;border-radius:50px;"><div id="my-map-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Nilüfer/Bursa,+Türkiye&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><style>#my-map-display .text-marker{}.map-generator{ max-width: 100%; max-height: 100%; background: none;}</style></div>
     </center>
@@ -131,30 +126,24 @@
 </html>
 <script type="template">https://api.github.com/users/yaso09</script>
 <script id="script">
-    fetch("__static/projects_tmp.html")
-        .then(dat => dat.text())
-        .then(text => {
-            const out = Handlebars.compile(text);
-            fetch("./__templates/projects.json")
-                .then(dat => dat.json())
-                .then(json => {
-                    document.querySelector("#list").innerHTML = out(json);
-                })
-        })
+    let hash = window.location.hash.split("#")[1];
+    let val;
+    fetch("./__templates/posts.json")
+        .then(dat => dat.json())
+        .then(json => { val = json });
     setTimeout(function() {
-        const intervalid = setInterval(function() {
-            if (document.querySelector("#list").innerHTML) clearInterval(intervalid);
-            else {
-                fetch("__static/projects_tmp.html")
-                    .then(dat => dat.text())
-                    .then(text => {
-                        const out = Handlebars.compile(text);
-                        fetch("./__templates/projects.json")
-                            .then(dat => dat.json())
-                            .then(json => {
-                                document.querySelector("#list").innerHTML = out(json);
-                            })
-                    })
-            }
-    }, 500)}, 1000);
+        document.querySelector("#aboutme").innerHTML = `
+            <center style="margin-bottom: 3vw;
+            color:#fff;">
+                <h1 style="font-size: 5rem">${String(val.posts[hash].title)}</h>
+                <p style="font-size: 1rem"
+            >${String(val.posts[hash].date)}</p>
+            </center>
+            <zero-md style="display: block;" src="__static/posts/${hash}.md">
+                <template data-merge="prepend">
+                    <link rel="stylesheet" href="__static/style-markdown.css">
+                </template>
+            </zero-md>
+            `;
+    }, 1000);
 </script>

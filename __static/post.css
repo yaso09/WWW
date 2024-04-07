@@ -1,4 +1,4 @@
-.project {
+.post {
     border: 1px solid #fff;
     padding: -5%;
     position: relative;
@@ -11,40 +11,27 @@
     color: #fff;
     background: #000;
     margin: 3%;
-} .project:hover {
+} .post:hover {
     transform: scale(1.05);
 }
-.project img {
-    border: 1px solid;
-    object-fit: cover;
-    border-radius: 0;
-    width: 100%;
-    height: 150px;
-    display: block;
-    margin: 0 auto;
-} .project img:hover {
-    transform: scale(1);
-    filter: brightness(1);
-}
-.project div {
+.post div {
     background: #000;
     left: 0; right: 0;
     height: 100px;
     width: 100%;
-    backdrop-filter: blur(3px) sepia(100%);
-} .project p {
+} .post p {
     font-weight: 500;
 }
-.project p, .project h1 {
+.post p, .post h1 {
     padding: 5%;
 }
 @media (max-width: 950px) {
-    .project {
+    .post {
         width: 100%;
         border-radius: 0;
         margin-left: -50px;
     }
-    .project:hover {
+    .post:hover {
         transform: scale(1);
     }
 }
