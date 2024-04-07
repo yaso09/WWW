@@ -35,4 +35,10 @@
             <a href="/deep">Yes</a>
         </center>
     </div>
+    <script>
+        document.querySelector("a").addEventListener("click", function() {
+            const audio = new Audio("./__static/sounds/click.wav");
+            audio.play();
+        })
+    </script>
 </body>

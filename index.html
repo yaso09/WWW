@@ -9,4 +9,10 @@
     <center>
         <h1>404 Not Found</h1>
     </center>
+    <script>
+        document.querySelector("a").addEventListener("click", function() {
+            const audio = new Audio("./__static/sounds/click.wav");
+            audio.play();
+        })
+    </script>
 </body>
